@@ -7,6 +7,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +26,19 @@ namespace UnoPlatformTrial
         public MainPage()
         {
             this.InitializeComponent();
+        }    
+    }
+
+    public class ValueIsEvenConverter : IValueConverter
+    {
+        public object? Convert(object? value, Type targetType, object? parameter, string language)
+        {
+            return value is int iVal && iVal % 2 == 0;
+        }
+
+        public object? ConvertBack(object? value, Type targetType, object? parameter, string language)
+        {
+            throw new NotImplementedException();
         }
     }
 }
