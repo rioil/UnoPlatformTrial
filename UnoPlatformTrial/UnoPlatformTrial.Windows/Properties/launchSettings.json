@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "UnoPlatformTrial.Windows": {
+      "commandName": "MsixPackage"
+    }
+  }
+}
